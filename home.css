@@ -1,11 +1,27 @@
-/* Google Font CDN Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  scroll-behavior: smooth;
+/* Google Font CDN Link - Using Poppins for a modern look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* --- 1. Global Variables and Resets --- */
+:root {
+    --primary-color: #4070f4; /* Blue */
+    --secondary-color: #0E2431; /* Dark Navy/Black */
+    --background-light: #F0F8FF; /* Light Blue/Off-White */
+    --text-color: #333;
+    --white: #fff;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
 }
 
 /* Custom Scroll Bar CSS */
@@ -16,534 +32,572 @@
     background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-    background: #6e93f7;
+    background: var(--primary-color);
     border-radius: 12px;
     transition: all 0.3s ease;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #4070f4;
-}
-/* navbar styling */
-nav{
-  position: fixed;
-  width: 100%;
-  padding: 20px 0;
-  z-index: 998;
-  transition: all 0.3s ease;
-  font-family: 'Ubuntu', sans-serif;
-}
-nav.sticky{
-  background: #4070f4;
-  padding: 13px 0;
-}
-nav .navbar{
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-}
-nav .navbar .logo a{
-  font-weight: 500;
-  font-size: 35px;
-  color: #4070f4;
-}
-nav.sticky .navbar .logo a{
-  color: #fff;
-}
-nav .navbar .menu{
-  display: flex;
-  position: relative;
-}
-nav .navbar .menu li{
-  list-style: none;
-  margin: 0 8px;
-}
-.navbar .menu a{
-  font-size: 18px;
-  font-weight: 500;
-  color: #0E2431;
-  padding: 6px 0;
-  transition: all 0.4s ease;
-}
-.navbar .menu a:hover{
-  color: #4070f4;
-}
-nav.sticky .menu a{
-  color: #FFF;
-}
-nav.sticky .menu a:hover{
-  color: #0E2431;
-}
-.navbar .media-icons a{
-  color: #4070f4;
-  font-size: 18px;
-  margin: 0 6px;
-}
-nav.sticky .media-icons a{
-  color: #FFF;
+    background: #2d55c4; /* Darker shade */
 }
 
-/* Side Navigation Menu Button CSS */
-nav .menu-btn,
-.navbar .menu .cancel-btn{
-  position: absolute;
-  color: #fff;
-  right: 30px;
-  top: 20px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: none;
+/* Base Button Styling (Using updated classes) */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    margin: 14px 0;
+    text-decoration: none;
 }
-nav .menu-btn{
-  color: #4070f4;
+.btn-primary button, .btn-secondary button {
+    outline: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    background: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    transition: all 0.4s ease;
 }
-nav.sticky .menu-btn{
-  color: #FFF;
+.btn-primary button:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(64, 112, 244, 0.5); /* Subtle glow on hover */
 }
-.navbar .menu .menu-btn{
-  color: #fff;
-}
-
-/* home section styling */
-.home {
-  height: 100vh;
-  width: 100%;
-  background: url("images/background.png") no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
-.home .home-content {
-  width: 90%;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.home .profile-container {
-  display: flex;
-  align-items: center;
-}
-.home .text {
-  flex: 1;
-  width: 60%;
-}
-.home .profile-image img {
-  height: 400px;
-  width: 400px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-left: 20px;
-}
-.home .text-one {
-  font-size: 25px;
-  color: #0E2431;
-}
-.home .text-two {
-  color: #0E2431;
-  font-size: 2.5rem;
-  width: 100%;
-  /* background-color:; */
-  font-weight: 600;
-  margin-left: -3px;
-}
-.home .text-three {
-  font-size: 40px;
-  margin: 5px 0;
-  color: #4070f4;
-}
-.home .text-four {
-  font-size: 23px;
-  margin: 5px 0;
-  color: #0E2431;
-}
-/* .home .button {
-  margin: 14px 0;
-}
-.home .button button {
-  outline: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 25px;
-  font-weight: 400;
-  background: #4070f4;
-  color: #fff;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: all 0.4s ease;
-}
-.home .button button:hover {
-  border-color: #4070f4;
-  background-color: #fff;
-  color: #4070f4;
-} */
-
-.typing-text {
-  display: inline-block;
-  border-right: 2px solid black;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 4s steps(22), blink 0.5s step-end infinite alternate;
-  vertical-align: bottom; /* Adjust vertical alignment */
+.btn-secondary button:hover {
+    border-color: var(--primary-color);
+    background-color: var(--white);
+    color: var(--primary-color);
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+/* Re-targeting updated HTML classes for sections */
+section {
+    padding-top: 40px;
+}
+.section-padding {
+    padding: 80px 0;
+}
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: var(--secondary-color);
+    position: relative;
+}
+.section-title::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 120px;
+    background: var(--primary-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+.topic-header {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
 }
 
+/* --- 2. Navigation Styling --- */
+header.header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 998;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparent */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.header.sticky {
+    background: var(--primary-color);
+    padding: 13px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+.navbar-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.header .logo a {
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+.header.sticky .logo a {
+    color: var(--white);
+}
+
+/* Navigation Links */
+.nav-menu .nav-list {
+    display: flex;
+}
+.nav-menu .nav-list li {
+    list-style: none;
+    margin: 0 15px;
+}
+.nav-menu a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+.header.sticky .nav-menu a {
+    color: var(--white);
+}
+.header.sticky .nav-menu a:hover {
+    color: var(--secondary-color);
+}
+
+/* Social Icons */
+.social-icons a {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-left: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icons a:hover {
+    transform: scale(1.1);
+    color: #2d55c4;
+}
+.header.sticky .social-icons a {
+    color: var(--white);
+}
+.header.sticky .social-icons a:hover {
+    color: var(--background-light);
+}
+
+/* Menu Button CSS (for mobile) */
+.menu-btn,
+.nav-menu .cancel-btn{
+  position: absolute;
+  color: var(--white);
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+.menu-btn{
+  color: var(--primary-color);
+}
+.header.sticky .menu-btn{
+  color: var(--white);
+}
+
+/* --- 3. Home/Hero Section Styling --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-light); 
+}
+.hero-content-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 80px; 
+}
+.text-group {
+    max-width: 50%;
+}
+.text-small {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+.text-large {
+    color: var(--secondary-color);
+    font-size: 3.5rem; 
+    font-weight: 700;
+    margin-top: 5px;
+}
+.text-subtitle {
+    font-size: 28px;
+    margin: 5px 0;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.text-location {
+    font-size: 20px;
+    margin: 5px 0;
+    color: var(--secondary-color);
+}
+
+/* Profile Image Styling */
+.profile-visual img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 50% 50% 12px 12px; /* Unique border radius */
+    border: 8px solid var(--primary-color);
+    box-shadow: var(--shadow);
+    transition: all 0.5s ease;
+}
+.profile-visual img:hover {
+    transform: translateY(-10px) scale(1.02); /* Pop up effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Typing Text Animation */
+.text-large .typing-text {
+    display: inline-block;
+    border-right: 2px solid var(--primary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--primary-color);
+    vertical-align: bottom; 
+    /* The JS handles the typing part, CSS keeps the blink effect */
+    animation: blink 0.5s step-end infinite alternate; 
+}
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% { border-color: transparent; }
 }
 
-
-/* About Section Styling */
-section{
-  padding-top: 40px;
+/* --- 4. About Section Styling --- */
+.about .about-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: 40px auto;
 }
-section .content{
-  width: 80%;
-  margin: 40px auto;
-  font-family: 'Poppins', sans-serif;
+.about .about-image{
+  width: 45%;
 }
-.about .about-details{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.about .about-image img{
+  height: 400px;
+  width: 100%; /* Make image flexible */
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+ box-shadow: var(--shadow);
 }
-section .title{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
+.about-text{
+  width: 50%;
 }
-section .title span{
-  color: #0E2431;
-  font-size: 30px;
-  font-weight: 600;
-  position: relative;
-  padding-bottom: 8px;
-}
-section .title span::before,
-section .title span::after{
-  content: '';
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: #4070f4;
-  left: 0;
-  bottom: 0;
-}
-section .title span::after{
-  bottom: -7px;
-  width: 70%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.about .about-details .left{
-  width: 45%;
-}
-.about .left img{
-  height: 400px;
-  width: 400px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-.about-details .right{
-  width: 55%;
-}
-section  .topic{
-  color: #0E2431;
-  font-size: 25px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-.about-details .right p{
-  text-align: justify;
-  color: #0E2431;
-}
-section .button{
-  margin: 16px 0;
-}
-section .button button{
-  outline: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 25px;
-  font-weight: 400;
-  background: #4070f4;
-  color: #fff;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-section .button button:hover{
-  border-color: #4070f4;
-  background-color: #fff;
-  color: #4070f4;
+.about-text p{
+  text-align: justify;
+  color: var(--secondary-color);
+ margin-bottom: 20px;
 }
 
- /* My Skills CSS */
+/* --- 5. Skills Section Styling (Interactive Bars) --- */
 .skills{
-  background: #F0F8FF;
+  background: var(--background-light);
 }
-.skills .content{
-  padding: 40px 0;
+.skills-grid-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
 }
-.skills .skills-details{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.skills-summary {
+    width: 45%;
 }
-.skills-details .text{
-  width: 50%;
+.skills-summary p {
+    color: var(--secondary-color);
+    text-align: justify;
+    margin-bottom: 10px;
 }
-.skills-details p{
-  color: #0E2431;
-  text-align: justify;
+.experience-badge {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    background: var(--white);
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    max-width: 250px;
 }
-.skills .skills-details .experience{
-  display: flex;
-  align-items: center;
-  margin: 0 10px;
+.experience-badge .num {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--primary-color);
 }
-.skills-details .experience .num{
-  color: #0E2431;
-  font-size: 80px;
-}
-.skills-details .experience .exp{
-  color: #0E2431;
-  margin-left: 20px;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 6px;
-}
-.skills-details .boxes{
-  width: 45%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.skills-details .box{
-  width: calc(100% / 2 - 20px);
-  margin: 20px 0;
-}
-.skills-details .boxes .topic{
-  font-size: 20px;
-  color: #4070f4;
-}
-.skills-details .boxes .per{
-  font-size: 60px;
-  color: #4070f4;
+.experience-badge .exp {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-left: 15px;
+    line-height: 1.2;
 }
 
-/* My Services CSS */
-.services .boxes{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+/* Skill Bars Styling */
+.skill-bars-grid {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
-.services .boxes .box{
-  margin: 20px 0;
-  width: calc(100% / 3 - 20px);
-  text-align: center;
-  border-radius: 12px;
-  padding: 30px 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-  cursor: default;
-  transition: all 0.4s ease;
+.skill-bar {
+    position: relative;
+    background: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
 }
-.services .boxes .box:hover{
-  background: #4070f4;
-  color: #fff;
+/* This pseudo-element creates the moving bar */
+.skill-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 5px;
+    width: 0; /* Start at 0, animated by JS */
+    transition: width 1.5s ease-in-out;
 }
-.services .boxes .box .icon{
-  height: 50px;
-  width: 50px;
-  background: #4070f4;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 50px;
-  font-size: 18px;
-  color: #fff;
-  margin: 0 auto 10px auto;
-  transition: all 0.4s ease;
+.skill-bar .topic, .skill-bar .per {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    top: -25px;
 }
-.boxes .box:hover .icon{
-  background-color: #fff;
-  color: #4070f4;
-}
-.services .boxes .box:hover .topic,
-.services .boxes .box:hover p{
-  color: #0E2431;
-  transition: all 0.4s ease;
-}
-.services .boxes .box:hover .topic,
-.services .boxes .box:hover p{
-  color: #fff;
+.skill-bar .per {
+    right: 0;
+    color: var(--primary-color);
 }
 
-/* Contact Me CSS */
+/* ANIMATION TRIGGER: Target the specific skill bars when the 'animate-bar' class is applied by JS */
+.skill-bars-grid.animate-bar .skill-bar:nth-child(1)::before { width: 90%; } /* HTML 90% */
+.skill-bars-grid.animate-bar .skill-bar:nth-child(2)::before { width: 90%; } /* CSS 90% */
+.skill-bars-grid.animate-bar .skill-bar:nth-child(3)::before { width: 60%; } /* JS 60% */
+.skill-bars-grid.animate-bar .skill-bar:nth-child(4)::before { width: 80%; } /* SQL 80% */
+.skill-bars-grid.animate-bar .skill-bar:nth-child(5)::before { width: 80%; } /* Python 80% */
+.skill-bars-grid.animate-bar .skill-bar:nth-child(6)::before { width: 80%; } /* Bootstrap 80% */
+
+/* --- 6. Services Section Styling (Interactive Cards) --- */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+.service-card {
+    margin: 20px 0;
+    width: calc(100% / 4 - 30px); /* 4 columns on desktop */
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 15px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    height: auto; /* Allow content to dictate height */
+}
+.service-card:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-10px); /* Lift up effect */
+    box-shadow: 0 10px 20px rgba(64, 112, 244, 0.4);
+}
+.service-card .icon {
+    height: 60px; 
+    width: 60px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    line-height: 60px;
+    font-size: 24px;
+    color: var(--white);
+    margin: 0 auto 15px auto;
+    transition: all 0.4s ease;
+}
+.service-card:hover .icon {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+.service-card:hover .topic,
+.service-card:hover p {
+    color: var(--white);
+}
+
+/* --- 7. Contact Section Styling --- */
 .contact{
-  background: #F0F8FF;
+  background: var(--background-light);
 }
-.contact .content{
-  margin: 0 auto;
+.contact-details{
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
   padding: 30px 0;
 }
-.contact .text{
-  width: 80%;
-  text-align: center;
-  margin: auto;
+.contact-details p {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
 }
 
-/* Footer CSS */
+/* --- 8. Footer Styling --- */
 footer{
-  background: #4070f4;
-  padding: 15px 0;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
+  background: var(--primary-color);
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 footer .text span{
-  font-size: 17px;
-  font-weight: 400;
-  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--white);
 }
 footer .text span a{
-  font-weight: 500;
-  color: #FFF;
+  font-weight: 500;
+  color: var(--white);
 }
 footer .text span a:hover{
-  text-decoration: underline;
-}
-/* Scroll TO Top Button CSS */
-.scroll-button a{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  color: #fff;
-  background: #4070f4;
-  padding: 7px 12px;
-  font-size: 18px;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.15);
-  display: none;
+  text-decoration: underline;
 }
 
-/* Responsive Media Query */
+/* Scroll To Top Button CSS */
+.scroll-top a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: var(--white);
+  background: var(--primary-color);
+  padding: 7px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 999;
+}
+
+/* --- 9. Responsive Media Queries --- */
 @media (max-width: 1190px) {
-  section .content{
-    width: 85%;
-  }
+    .section-padding {
+        padding: 60px 0;
+    }
+    .hero-content-container,
+    .about-flex-container,
+    .skills-grid-container,
+    .services-grid {
+        width: 90%;
+    }
+    .service-card {
+        width: calc(100% / 3 - 20px); /* 3 columns on smaller desktops */
+    }
 }
+
 @media (max-width: 1000px) {
-  .about .about-details{
-    justify-content: center;
-    flex-direction: column;
-  }
-  .about .about-details .left{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  .about-details .right{
-    width: 90%;
-    margin: 40px 0;
-  }
-  .services .boxes .box{
-    margin: 20px 0;
-    width: calc(100% / 2 - 20px);
-  }
+    .hero-content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text-group {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .profile-visual img {
+        height: 300px;
+        width: 300px;
+    }
+    .about-flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about .about-image, .about-text {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    .skills-grid-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills-summary, .skill-bars-grid {
+        width: 90%;
+        margin-bottom: 40px;
+    }
+    .service-card {
+        width: calc(100% / 2 - 20px); /* 2 columns on tablets */
+    }
 }
-@media (max-width: 900px) {
-  .about .left img{
-    height: 350px;
-    width: 350px;
-  }
-  .home .profile-container{
-    flex-direction: column;
-    align-items: center;
-  }
-  .home .profile-image img{
-    margin: 20px 0;
-  }
-}
+
 @media (max-width: 750px) {
-  nav .navbar{
-    width: 90%;
-  }
-  nav .navbar .menu{
-    position: fixed;
-    left: -100%;
-    top: 0;
-    background: #0E2431;
-    height: 100vh;
-    max-width: 400px;
-    width: 100%;
-    padding-top: 60px;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.5s ease;
-  }
-  .navbar.active .menu{
-    left: 0;
-  }
-  nav .navbar .menu a{
-    font-size: 23px;
-    display: block;
-    color: #fff;
-    margin: 10px 0;
-  }
-  nav.sticky .menu a:hover{
-    color: #4070f4;
-  }
-  nav .navbar .media-icons{
-    display: none;
-  }
-  nav .menu-btn,
-  .navbar .menu .cancel-btn{
-    display: block;
-  }
-  .home .text-two{
-    font-size: 65px;
-  }
-  .home .text-three{
-    font-size: 35px;
-  }
-  .skills .skills-details{
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .skills-details .text{
-    width: 100%;
-    margin-bottom: 50px;
-  }
-  .skills-details .boxes{
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  .services .boxes .box{
-    margin: 20px 0;
-    width: 100%;
-  }
-  .contact .text{
-    width: 100%;
-  }
+    /* Navbar Toggle */
+    .menu-btn, .nav-menu .cancel-btn{
+        display: block;
+    }
+    .navbar-container {
+        width: 95%;
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        background: var(--secondary-color);
+        height: 100vh;
+        max-width: 400px;
+        width: 100%;
+        padding-top: 60px;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .nav-menu .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-menu .nav-list a {
+        font-size: 20px;
+        display: block;
+        color: var(--white);
+        margin: 10px 0;
+    }
+    .nav-menu .nav-list a:hover {
+        color: var(--primary-color);
+    }
+    .social-icons {
+        display: none;
+    }
+
+    /* Home Section */
+    .text-large {
+        font-size: 2.5rem;
+    }
+    .text-subtitle {
+        font-size: 24px;
+    }
+    .profile-visual img {
+        height: 250px;
+        width: 250px;
+    }
+
+    /* General */
+    .section-title {
+        font-size: 30px;
+    }
+    .service-card {
+        width: 100%; /* 1 column on phones */
+    }
+    .experience-badge {
+        justify-content: center;
+        margin: 30px auto;
+    }
 }
+
 @media (max-width: 500px){
-  .home .text-two{
-    font-size: 55px;
-  }
-  .home .text-three{
-    font-size: 33px;
-  }
-  .skills-details .boxes .per{
-    font-size: 50px;
-    color: #4070f4;
-  }
+    .text-large {
+        font-size: 2rem;
+    }
+    .text-subtitle {
+        font-size: 20px;
+    }
 }
