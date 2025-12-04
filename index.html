@@ -1,211 +1,180 @@
 <!DOCTYPE html>
-<!-- Website - www.codingnepalweb.com -->
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8" />
-    <title>VNDAK</title>
+    <title>Ashok Karthik - Portfolio</title>
     <link rel="stylesheet" href="home.css" />
-    <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <!-- Move to up button -->
-    <div class="scroll-button">
-      <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div class="scroll-top">
+        <a href="#home" aria-label="Scroll to Top"><i class="fas fa-arrow-up"></i></a>
     </div>
-    <!-- navgaition menu -->
-    <nav>
-      <div class="navbar">
-        <div class="logo"><a href="#">Portfolio.</a></div>
-        <ul class="menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <div class="cancel-btn">
-            <i class="fas fa-times"></i>
-          </div>
-        </ul>
-        <div class="media-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="https://github.com/karthik123-alla"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/ashok-kartheek-alla-378643188/"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/karthikjolly/"><i class="fab fa-instagram"></i></a>
+
+    <header class="header">
+        <div class="navbar-container">
+            <div class="logo"><a href="#">A.K. Portfolio</a></div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+            </nav>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/karthik123-alla" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ashok-kartheek-alla-378643188/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/karthikjolly/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-      </div>
-      <div class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </div>
-    </nav>
+    </header>
 
-    <!-- Home Section Start -->
-    <section class="home" id="home">
-      <div class="home-content">
-        <div class="profile-container">
-          <div class="text">
-            <div class="text-one">Hello,</div>
-            <div class="text-two">I'm <span class="typing-text">Ashok Karthik</span></div>
-            <div class="text-three">UI/UX Designer</div>
-            <div class="text-four">From India</div>
-          </div>
-          <div class="profile-image">
-            <img src="image/Portfolio image.png" alt="Ashok Karthik">
-          </div>
-        </div>    
-        <!-- <div class="button">
-          <button>Hire Me</button>
-        </div> -->
-      </div>
-    </section>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content-container">
+                <div class="text-group">
+                    <p class="text-small">Hello,</p>
+                    <h1 class="text-large">I'm <span class="typing-text">Ashok Karthik</span></h1>
+                    <h2 class="text-subtitle">Full-Stack Python Developer | UI/UX Designer</h2>
+                    <p class="text-location">From India</p>
+                    <a href="#contact" class="btn-primary">Hire Me</a>
+                </div>
+                <div class="profile-visual">
+                    <img src="image/Portfolio image.png" alt="Ashok Karthik profile" loading="lazy">
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-padding about" id="about">
+            <div class="section-title">About Me</div>
+            <div class="about-flex-container">
+                <div class="about-image">
+                    <img src="image/IMG_20240203_172538.jpg" alt="Ashok Karthik professional photo" loading="lazy" />
+                </div>
+                <div class="about-text">
+                    <h3 class="topic-header">Coding Is My Passion</h3>
+                    <p>
+                        Coding is more than just a skill for me; it’s a passion that drives my curiosity and creativity. Each line of code is a chance to solve complex problems, build something meaningful, and push the limits of what technology can achieve. I find immense satisfaction in the process—from planning and structuring a solution to seeing it come to life and making an an impact. This passion fuels my continuous learning, as I’m always eager to explore new languages, tools, and technologies to become a better developer.
+                    </p>
+                    <a href="https://drive.google.com/file/d/100jKVUIHWNr9Xiz0Vy1PhG5d8N2tMswL/view?usp=sharing" target="_blank" class="btn-secondary">
+                        <button type="button">Download CV</button>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <!-- About Section Start -->
-    <section class="about" id="about">
-      <div class="content">
-        <div class="title"><span>About Me</span></div>
-        <div class="about-details">
-          <div class="left">
-            <img src="image/IMG_20240203_172538.jpg" alt="" />
-          </div>
-          <div class="right">
-            <div class="topic">Coding Is My Passion</div>
-            <p>
-              Coding is more than just a skill for me; it’s a passion that drives my curiosity and creativity. Each line of code is a chance to solve complex problems, build something meaningful, and push the limits of what technology can achieve. I find immense satisfaction in the process—from planning and structuring a solution to seeing it come to life and making an impact. This passion fuels my continuous learning, as I’m always eager to explore new languages, tools, and technologies to become a better developer.            </p>
-            <div class="button">
-              <a href="https://drive.google.com/file/d/100jKVUIHWNr9Xiz0Vy1PhG5d8N2tMswL/view?usp=sharing">
-                <button type="button">Download CV</button>
-              </a>
+        <section class="section-padding skills" id="skills">
+            <div class="section-title">My Skills</div>
+            <div class="skills-grid-container">
+                <div class="skills-summary">
+                    <h3 class="topic-header">Skills Reflect Our Knowledge</h3>
+                    <p>
+                        I'm Ashok Kartheek, a passionate **full-stack Python developer** with expertise across various technologies and a knack for problem-solving. My technical skills span front-end technologies (**HTML5, CSS, Bootstrap, JavaScript**), back-end programming with **Python**, and database management (**SQL, MySQL**). I’m also experienced in cloud platforms like **AWS** and version control tools like **Git and GitHub**.
+                    </p>
+                    <p>
+                        Beyond coding, I bring knowledge of database normalization, isolation levels, and Remote Desktop Protocol (RDP). With experience in roles from Process Associate to AWS and IoT internships, I focus on combining my technical knowledge and hands-on experience to deliver impactful, efficient solutions.
+                    </p>
+                    <div class="experience-badge">
+                        <div class="num">01</div>
+                        <div class="exp">
+                            Years Of <br />
+                            Experience
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-bars-grid">
+                    <div class="skill-bar">
+                        <div class="topic">HTML</div>
+                        <div class="per">90%</div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="topic">CSS</div>
+                        <div class="per">90%</div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="topic">JavScript</div>
+                        <div class="per">60%</div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="topic">SQL</div>
+                        <div class="per">80%</div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="topic">Python</div>
+                        <div class="per">80%</div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="topic">Bootstrap</div>
+                        <div class="per">80%</div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- My Skill Section Start -->
-    <!-- Section Tag and Other Div will same where we need to put same CSS -->
-    <section class="skills" id="skills">
-      <div class="content">
-        <div class="title"><span>My Skills</span></div>
-        <div class="skills-details">
-          <div class="text">
-            <div class="topic">Skills Reflects Our Knowledge</div>
-            <p>I'm Ashok Kartheek, a passionate full-stack Python developer with expertise across various technologies and a knack for problem-solving. My technical skills span front-end technologies (HTML5, CSS, Bootstrap, JavaScript), back-end programming with Python, and database management (SQL, MySQL). I’m also experienced in cloud platforms like AWS and version control tools like Git and GitHub. 
-              
-              Beyond coding, I bring knowledge of database normalization, isolation levels, and Remote Desktop Protocol (RDP). With experience in roles from Process Associate to AWS and IoT internships, I focus on combining my technical knowledge and hands-on experience to deliver impactful, efficient solutions.
-              
-              Explore my work, projects, and certifications here to learn more about my journey in tech!</p>
-            <div class="experience">
-              <div class="num">01</div>
-              <div class="exp">
-                Years Of <br />
-                Experience
-              </div>
+        <section class="section-padding services" id="services">
+            <div class="section-title">My Services</div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="topic">Web Development</div>
+                    <p>A dedicated web developer skilled in creating responsive, user-friendly websites. With expertise in HTML5, CSS, Bootstrap, JavaScript, and Python, I build dynamic and engaging experiences. My background in database management and cloud services (AWS) ensures efficient, scalable solutions. Let’s create something amazing together!</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="topic">Graphic Design</div>
+                    <p>An entry-level graphic designer passionate about creating eye-catching visuals. With a strong foundation in design principles and creativity, I specialize in logos, social media graphics, and simple layouts. I’m excited to bring fresh ideas to life and grow in the world of design!</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="topic">Logo Designer</div>
+                    <p>A logo designer focused on crafting memorable and impactful brand identities. I create clean, versatile logos that communicate the essence of a brand with simplicity and style. Let’s bring your vision to life with a logo that stands out!</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <i class="fas fa-camera-retro"></i> </div>
+                    <div class="topic">Photography</div>
+                    <p>A photographer with an eye for capturing unique moments and perspectives. From landscapes to portraits, I strive to tell stories through my lens, blending creativity with attention to detail. Let’s create lasting memories, one shot at a time!</p>
+                </div>
             </div>
-          </div>
-          <div class="boxes">
-            <div class="box">
-              <div class="topic">HTML</div>
-              <div class="per">90%</div>
-            </div>
-            <div class="box">
-              <div class="topic">CSS</div>
-              <div class="per">90%</div>
-            </div>
-            <div class="box">
-              <div class="topic">JavScript</div>
-              <div class="per">60%</div>
-            </div>
-            <div class="box">
-              <div class="topic">SQL</div>
-              <div class="per">80%</div>
-            </div>
-            <div class="box">
-              <div class="topic">Python</div>
-              <div class="per">80%</div>
-            </div>
-            <div class="box">
-              <div class="topic">Bootstrap</div>
-              <div class="per">80%</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- My Services Section Start -->
-    <section class="services" id="services">
-      <div class="content">
-        <div class="title"><span>My Services</span></div>
-        <div class="boxes">
-          <div class="box">
-            <div class="icon">
-              <i class="fas fa-desktop"></i>
+        <section class="section-padding contact" id="contact">
+            <div class="section-title">Contact Me</div>
+            <div class="contact-details">
+                <h3 class="topic-header">Have a Project in Mind? Let’s Make It Happen!</h3>
+                <p>I’m always excited to take on new challenges and bring creative ideas to life. Whether it’s a development project, design work, or something unique, let’s collaborate to make it exceptional. Feel free to reach out—I’d love to discuss how I can help bring your vision to reality!</p>
+                <a href="mailto:karthik9441153323@gmail.com" class="btn-primary">
+                    <button type="button">Let's Chat</button>
+                </a>
             </div>
-            <div class="topic">Web Devlopment</div>
-            <p>A dedicated web developer skilled in creating responsive, user-friendly websites. With expertise in HTML5, CSS, Bootstrap, JavaScript, and Python, I build dynamic and engaging experiences. My background in database management and cloud services (AWS) ensures efficient, scalable solutions. Let’s create something amazing together!</p>
-          </div>
-          <div class="box">
-            <div class="icon">
-              <i class="fas fa-paint-brush"></i>
-            </div>
-            <div class="topic">Graphic Design</div>
-            <p>An entry-level graphic designer passionate about creating eye-catching visuals. With a strong foundation in design principles and creativity, I specialize in logos, social media graphics, and simple layouts. I’m excited to bring fresh ideas to life and grow in the world of design!</p>
-          </div>
-          <div class="box">
-            <div class="icon">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <div class="topic">Logo Designer</div>
-            <p>a logo designer focused on crafting memorable and impactful brand identities. I create clean, versatile logos that communicate the essence of a brand with simplicity and style. Let’s bring your vision to life with a logo that stands out!</p>
-          </div>
-          <div class="box">
-            <div class="icon">
-              <i class="fab fa-android"></i>
-            </div>
-            <div class="topic">Photography</div>
-            <p>a photographer with an eye for capturing unique moments and perspectives. From landscapes to portraits, I strive to tell stories through my lens, blending creativity with attention to detail. Let’s create lasting memories, one shot at a time!</p>
-          </div>
-          <!-- <div class="box">
-            <div class="icon">
-              <i class="fas fa-camera-retro"></i>
-            </div>
-            <div class="topic">Photography</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
-          </div>
-          <div class="box">
-            <div class="icon">
-              <i class="fas fa-tablet-alt"></i>
-            </div>
-            <div class="topic">Apps Devlopment</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
-          </div>
-        </div> -->
-      </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Contact Me section Start -->
-    <section class="contact" id="contact">
-      <div class="content">
-        <div class="title"><span>Contact Me</span></div>
-        <div class="text">
-          <div class="topic">Have a Project in Mind? Let’s Make It Happen!</div>
-          <p>I’m always excited to take on new challenges and bring creative ideas to life. Whether it’s a development project, design work, or something unique, let’s collaborate to make it exceptional. Feel free to reach out—I’d love to discuss how I can help bring your vision to reality!</p>
-          <div class="button">
-            <a href="mailto:karthik9441153323@gmail.com">
-              <button>Let's Chat</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer Section Start -->
     <footer>
-      <div class="text">
-        <span><a href="#">💚💛 Self Made 💛💚</a></span>
-      </div>
+        <div class="text">
+            <span>&copy; 2025 Ashok Karthik. Built with 💚💛 Self Made 💛💚</span>
+        </div>
     </footer>
 
     <script src="home.js"> </script>
+</body>
+</html>
