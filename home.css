@@ -1,3 +1,5 @@
+/* home.css */
+
 /* Google Font CDN Link - Using Poppins for a modern look */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
@@ -40,7 +42,7 @@ body {
     background: #2d55c4; /* Darker shade */
 }
 
-/* Base Button Styling (Using updated classes) */
+/* Base Button Styling */
 .btn-primary, .btn-secondary {
     display: inline-block;
     margin: 14px 0;
@@ -61,15 +63,19 @@ body {
 .btn-primary button:hover {
     background-color: var(--white);
     color: var(--primary-color);
-    box-shadow: 0 0 10px rgba(64, 112, 244, 0.5); /* Subtle glow on hover */
+    box-shadow: 0 0 10px rgba(64, 112, 244, 0.5); 
+}
+.btn-secondary button {
+    background: transparent;
+    color: var(--primary-color);
 }
 .btn-secondary button:hover {
     border-color: var(--primary-color);
-    background-color: var(--white);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
-/* Re-targeting updated HTML classes for sections */
+/* Base Section Styling */
 section {
     padding-top: 40px;
 }
@@ -108,7 +114,7 @@ header.header {
     padding: 20px 0;
     z-index: 998;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.95); /* Semi-transparent */
+    background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 .header.sticky {
@@ -132,8 +138,6 @@ header.header {
 .header.sticky .logo a {
     color: var(--white);
 }
-
-/* Navigation Links */
 .nav-menu .nav-list {
     display: flex;
 }
@@ -156,8 +160,6 @@ header.header {
 .header.sticky .nav-menu a:hover {
     color: var(--secondary-color);
 }
-
-/* Social Icons */
 .social-icons a {
     color: var(--primary-color);
     font-size: 20px;
@@ -171,11 +173,8 @@ header.header {
 .header.sticky .social-icons a {
     color: var(--white);
 }
-.header.sticky .social-icons a:hover {
-    color: var(--background-light);
-}
 
-/* Menu Button CSS (for mobile) */
+/* Mobile Menu Button CSS */
 .menu-btn,
 .nav-menu .cancel-btn{
   position: absolute;
@@ -235,19 +234,17 @@ header.header {
     margin: 5px 0;
     color: var(--secondary-color);
 }
-
-/* Profile Image Styling */
 .profile-visual img {
     height: 400px;
     width: 400px;
     object-fit: cover;
-    border-radius: 50% 50% 12px 12px; /* Unique border radius */
+    border-radius: 50% 50% 12px 12px;
     border: 8px solid var(--primary-color);
     box-shadow: var(--shadow);
     transition: all 0.5s ease;
 }
 .profile-visual img:hover {
-    transform: translateY(-10px) scale(1.02); /* Pop up effect */
+    transform: translateY(-10px) scale(1.02); 
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -259,7 +256,6 @@ header.header {
     overflow: hidden;
     color: var(--primary-color);
     vertical-align: bottom; 
-    /* The JS handles the typing part, CSS keeps the blink effect */
     animation: blink 0.5s step-end infinite alternate; 
 }
 @keyframes blink {
@@ -279,7 +275,7 @@ header.header {
 }
 .about .about-image img{
   height: 400px;
-  width: 100%; /* Make image flexible */
+  width: 100%;
   max-width: 400px;
   object-fit: cover;
   border-radius: 12px;
@@ -349,7 +345,7 @@ header.header {
     height: 10px;
     border-radius: 5px;
 }
-/* This pseudo-element creates the moving bar */
+/* Base state of the bar (starts at 0 width) */
 .skill-bar::before {
     content: '';
     position: absolute;
@@ -358,7 +354,7 @@ header.header {
     height: 100%;
     background: var(--primary-color);
     border-radius: 5px;
-    width: 0; /* Start at 0, animated by JS */
+    width: 0; /* Start at 0 */
     transition: width 1.5s ease-in-out;
 }
 .skill-bar .topic, .skill-bar .per {
@@ -373,7 +369,7 @@ header.header {
     color: var(--primary-color);
 }
 
-/* ANIMATION TRIGGER: Target the specific skill bars when the 'animate-bar' class is applied by JS */
+/* ANIMATION TRIGGER: Targets the specific skill bars when the 'animate-bar' class is applied by JS */
 .skill-bars-grid.animate-bar .skill-bar:nth-child(1)::before { width: 90%; } /* HTML 90% */
 .skill-bars-grid.animate-bar .skill-bar:nth-child(2)::before { width: 90%; } /* CSS 90% */
 .skill-bars-grid.animate-bar .skill-bar:nth-child(3)::before { width: 60%; } /* JS 60% */
@@ -399,7 +395,7 @@ header.header {
     box-shadow: var(--shadow);
     cursor: pointer;
     transition: all 0.4s ease;
-    height: auto; /* Allow content to dictate height */
+    height: auto;
 }
 .service-card:hover {
     background: var(--primary-color);
@@ -447,7 +443,6 @@ footer{
   background: var(--primary-color);
   padding: 15px 0;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
 }
 footer .text span{
   font-size: 15px;
@@ -489,7 +484,7 @@ footer .text span a:hover{
         width: 90%;
     }
     .service-card {
-        width: calc(100% / 3 - 20px); /* 3 columns on smaller desktops */
+        width: calc(100% / 3 - 20px); 
     }
 }
 
@@ -523,7 +518,7 @@ footer .text span a:hover{
         margin-bottom: 40px;
     }
     .service-card {
-        width: calc(100% / 2 - 20px); /* 2 columns on tablets */
+        width: calc(100% / 2 - 20px); 
     }
 }
 
@@ -561,9 +556,6 @@ footer .text span a:hover{
         color: var(--white);
         margin: 10px 0;
     }
-    .nav-menu .nav-list a:hover {
-        color: var(--primary-color);
-    }
     .social-icons {
         display: none;
     }
@@ -579,13 +571,11 @@ footer .text span a:hover{
         height: 250px;
         width: 250px;
     }
-
-    /* General */
     .section-title {
         font-size: 30px;
     }
     .service-card {
-        width: 100%; /* 1 column on phones */
+        width: 100%; 
     }
     .experience-badge {
         justify-content: center;
